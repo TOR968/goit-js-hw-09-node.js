@@ -1,0 +1,24 @@
+{
+  "name": "goit-js-hw-09-node.js",
+  "version": "1.0.0",
+  "description": "hw",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TOR968/goit-js-hw-09-node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TOR968/goit-js-hw-09-node.js/issues"
+  },
+  "homepage": "https://github.com/TOR968/goit-js-hw-09-node.js#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
