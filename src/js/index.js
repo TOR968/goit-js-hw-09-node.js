@@ -1,4 +1,5 @@
 import galleryItems from "./gallery-items.js";
+import gallery from "../templates/gallery.hbs";
 
 const galleryContainer = document.querySelector(".js-gallery");
 const cardsMarkup = createGalleryCardsMarkup(galleryItems);
@@ -12,25 +13,7 @@ galleryContainer.insertAdjacentHTML("beforeend", cardsMarkup);
 galleryContainer.addEventListener("click", onGalleryContainerClick);
 
 function createGalleryCardsMarkup(galleryItems) {
-  return galleryItems
-    .map(({ preview, original, description }) => {
-      return `
-    <li class="gallery__item">
-  <a
-    class="gallery__link"
-    href=${original}
-  >
-    <img
-      class="gallery__image"
-      src=${preview}
-      data-source=${original}
-      alt=${description}
-    />
-  </a>
-</li>
-    `;
-    })
-    .join("");
+  return gallery(galleryItems);
 }
 
 function onGalleryContainerClick(e) {
@@ -50,21 +33,17 @@ closeModalBtn.addEventListener("click", closeModal);
 
 function addActiveModalClass() {
   modalWindow.classList.add("is-open");
-  console.log("modalWindow");
 }
 
 function openImage(e) {
   bigPicture.src = e.target.dataset.source;
   bigPicture.alt = e.target.alt;
-  console.log("openImage");
 }
 
 function handleKeyPress(e) {
   if (e.code !== "Escape") {
     return;
   }
-
-  console.log("handleKeyPress");
   closeModal();
 }
 

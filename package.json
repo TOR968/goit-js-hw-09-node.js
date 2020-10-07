@@ -20,5 +20,8 @@
   "homepage": "https://github.com/TOR968/goit-js-hw-09-node.js#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "parcel-plugin-handlebars-precompile": "^1.0.2"
   }
 }
